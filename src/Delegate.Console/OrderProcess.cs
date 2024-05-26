@@ -1,12 +1,13 @@
 using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace Delegate.Console
 {
-    internal class ProcessOrder
+    public class ProcessOrder
     {
-        public delegate void OrderSendEmail();
-        public delegate void OrderCompleted();
+        public delegate bool OrderSendEmail(List<Order> orders);
+        public delegate void OrderCompleted(List<Order> orders);
         
         public OrderSendEmail? OnOrderSendEmail { get; set; }
 
@@ -14,13 +15,16 @@ namespace Delegate.Console
         {
             ArgumentNullException.ThrowIfNull(orders);
 
-            Initialize();
-            orderCompleted?.Invoke();
+            Initialize(orders);
+            orderCompleted?.Invoke(orders);
         }
 
-        private void Initialize()
+        private void Initialize(List<Order> orders)
         {
-            OnOrderSendEmail?.Invoke();
+            if(OnOrderSendEmail?.Invoke(orders) == false)
+            {
+                System.Console.WriteLine($"Unable completed order {orders.FirstOrDefault()?.Description}");
+            }
         }
     }
 }
