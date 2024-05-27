@@ -16,7 +16,7 @@
 
             var process = new ProcessOrder
             {
-                OnOrderSendEmail = (orders) => orders.FirstOrDefault().IsReadyShipment
+                OnOrderSendEmail = (orders) => orders.FirstOrDefault()?.IsReadyShipment
             };
 
             //ProcessOrder.OrderCompleted chain = ConfirmOrder;
@@ -25,7 +25,7 @@
             //chain += Three;
             
 
-            ProcessOrder.OrderCompleted chain = (orders) => ConfirmOrder(orders);
+            Action<List<Order>> chain = (orders) => ConfirmOrder(orders);
 
             chain += (orders) => System.Console.WriteLine("One with lambda");
 
