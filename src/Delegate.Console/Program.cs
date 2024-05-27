@@ -16,7 +16,7 @@
 
             var process = new ProcessOrder
             {
-                OnOrderSendEmail = (orders) => orders.FirstOrDefault()?.IsReadyShipment
+                OnOrderSendEmail = (orders) => orders.FirstOrDefault().IsReadyShipment
             };
 
             //ProcessOrder.OrderCompleted chain = ConfirmOrder;
