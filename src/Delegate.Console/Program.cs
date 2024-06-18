@@ -23,7 +23,6 @@
             //chain += One;
             //chain += Two;
             //chain += Three;
-            
 
             Action<List<Order>> chain = (orders) => ConfirmOrder(orders);
 
