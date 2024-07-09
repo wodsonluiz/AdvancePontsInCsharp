@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OverloagingExtension.Consol
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FibonacciSequence.Console", "src\FibonacciSequence.Console\FibonacciSequence.Console.csproj", "{81D9A1A8-FEEE-4AA9-9D53-5A29328E853F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AnonymousType", "src\AnonymousType\AnonymousType.csproj", "{D1D47E63-94E4-4C70-A4B4-DE3E3FB415BF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -35,6 +37,10 @@ Global
 		{81D9A1A8-FEEE-4AA9-9D53-5A29328E853F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{81D9A1A8-FEEE-4AA9-9D53-5A29328E853F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{81D9A1A8-FEEE-4AA9-9D53-5A29328E853F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D1D47E63-94E4-4C70-A4B4-DE3E3FB415BF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D1D47E63-94E4-4C70-A4B4-DE3E3FB415BF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D1D47E63-94E4-4C70-A4B4-DE3E3FB415BF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D1D47E63-94E4-4C70-A4B4-DE3E3FB415BF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -44,6 +50,7 @@ Global
 		{5DD51BFE-EA42-4393-AFEC-6B0254D509F5} = {A451C6E8-60E5-4EB1-BC37-EA8D466717BC}
 		{1EC28395-99BE-45E0-A4A7-34522315690F} = {A451C6E8-60E5-4EB1-BC37-EA8D466717BC}
 		{81D9A1A8-FEEE-4AA9-9D53-5A29328E853F} = {A451C6E8-60E5-4EB1-BC37-EA8D466717BC}
+		{D1D47E63-94E4-4C70-A4B4-DE3E3FB415BF} = {A451C6E8-60E5-4EB1-BC37-EA8D466717BC}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {CC675ACA-41DC-440B-A328-2BADB307EBF4}
