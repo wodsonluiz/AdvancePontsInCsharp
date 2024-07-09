@@ -21,7 +21,12 @@ class Program
             order.Amount
         };
 
-        Console.WriteLine($"Print property to object anonytype {subSet.Amount} and {subSet.Id}");
+        var copy = subSet with 
+        {
+            Amount = subSet.Amount + 10
+        };
+
+        Console.WriteLine($"Print property to object anonytype {copy.Amount} and {copy.Id}");
 
         Console.WriteLine(instance.Equals(secondInstance));
         Console.WriteLine(instance == secondInstance);
