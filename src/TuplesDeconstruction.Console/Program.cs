@@ -28,11 +28,11 @@ internal static class Program
 
         //Tuple assignment
         var subSet2 = (order.Id, order.Description, order.Itens);
-        //var (id, description, itens) = (order.Id, order.Description, order.Itens);
-
+        
         //Tuple deconstruction  
         long id;
         string description;
+        decimal price;
 
         (id, description, var itens) = (order.Id, order.Description, order.Itens);
 
@@ -41,9 +41,30 @@ internal static class Program
         Console.WriteLine(id);
         Console.WriteLine(description); 
         Console.WriteLine(itens);
+        Order order1 = null;
+
+        //Property Patterns
+        if(order1 is { Price: < 100 and < 60 })
+        {
+            System.Console.WriteLine("Using pattern property");
+        }
+
+        if(order is not { Price: > 100})
+        {
+            System.Console.WriteLine("Using pattern property with negation");
+        }
 
         //Deconstruct object types
-        (id, description) = order; 
+        (id, description, price) = order; 
+
+        var status = price switch
+        {
+            (> 100) => "High priority order",
+            (< 100) => "Order is ready",
+            _ => "Order price is null"
+        };
+
+        System.Console.WriteLine($"status: {status}");
 
         var dictionary = new Dictionary<string, Order>();
 
